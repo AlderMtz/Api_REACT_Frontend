@@ -1,0 +1,17 @@
+services:
+  - name: my-react-app
+    type: web
+    buildCommand: npm run build
+    startCommand: serve -s build -l $PORT # Ajusta esto al comando que inicia tu servidor React
+    env:
+      # Ajusta la ruta a tu archivo de inicio (index.js, server.js, etc.)
+      RENDER_ENTRYPOINT: /app/index.js
+    routes:
+      - src: /
+        dest: /index.html
+      - src: /tasks
+        dest: /index.html
+      - src: //tasks-create
+        dest: /index.html
+   
+      # Ajusta estas rutas a todas las rutas de tu SPA que necesiten redireccionarse
