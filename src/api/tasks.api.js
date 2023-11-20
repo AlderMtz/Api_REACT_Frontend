@@ -1,8 +1,8 @@
 import axios from 'axios' /* importamos el modulo "axios" que nos permite comunicarnos con el backend "django run server" */
 
 const taskApi = axios.create({
-    /* baseURL: 'http://127.0.0.1:8000/tasks/api/v1/tasks/',  *//* definimos a "baseUrl" ya que será la misma direccion que vamos a utilizar en todas las operaciones */
-    baseURL: 'https://taskapp-hz1i.onrender.com/tasks/api/v1/tasks/', /* url en linea */
+    baseURL: 'https://taskappbackend-b8ok.onrender.com/tasks/api/v1/tasks/',   //* definimos a "baseUrl" ya que será la misma direccion que vamos a utilizar en todas las operaciones */
+    /* baseURL: 'http://127.0.0.1:8000/tasks/api/v1/tasks/', */ /* url en linea */
 }); 
 
 export const getAllTasks = () => taskApi.get('/'); /* las listas de tareas que se encuentran en la direccion donde corre "django run server" */
