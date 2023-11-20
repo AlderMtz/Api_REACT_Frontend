@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "serve -s build -l $PORT",
     "build": "vite build",
-    "preview": "vite preview",
-    "start": "react-scripts start"
+    "preview": "vite preview"
+    
 
   },
   "dependencies": {
