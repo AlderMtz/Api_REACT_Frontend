@@ -5,13 +5,13 @@ services:
     startCommand: serve start # Ajusta esto al comando que inicia tu servidor React
     env:
       # Ajusta la ruta a tu archivo de inicio (index.js, server.js, etc.)
-      RENDER_ENTRYPOINT: /app/index.js
+      RENDER_ENTRYPOINT: /src/main.jsx
     routes:
       - src: /
-        dest: /index.html
+        dest: /main.jsx
       - src: /tasks
-        dest: /index.html
-      - src: //tasks-create
-        dest: /index.html
+        dest: /main.jsx
+      - src: /tasks-create
+        dest: /main.jsx
    
       # Ajusta estas rutas a todas las rutas de tu SPA que necesiten redireccionarse
