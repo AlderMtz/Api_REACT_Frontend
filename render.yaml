@@ -8,10 +8,10 @@ services:
       RENDER_ENTRYPOINT: /src/main.jsx
     routes:
       - src: /
-        dest: /main.jsx
+        dest: /index.html
       - src: /tasks
-        dest: /main.jsx
+        dest: /index.html
       - src: /tasks-create
-        dest: /main.jsx
+        dest: /index.html
    
       # Ajusta estas rutas a todas las rutas de tu SPA que necesiten redireccionarse
