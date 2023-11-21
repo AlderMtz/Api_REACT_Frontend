@@ -1,13 +1,13 @@
-services:
-  - name: my-react-app
-    type: web
-    buildCommand: npm run build
-    startCommand: npm serve dist -s -n -L -p $PORT # Ajusta esto al comando que inicia tu servidor React
-    routes:
-      - src: /.*
-        headers:
-          - key: Cache-Control
-            value: public, max-age=0, must-revalidate
-        dest: /index.html
+#services:
+#  - name: my-react-app
+#    type: web
+#    buildCommand: npm run build
+#    startCommand: npm serve dist -s -n -L -p $PORT # Ajusta esto al comando que inicia tu servidor React
+#    routes:
+#      - src: /.*
+#        headers:
+#          - key: Cache-Control
+#            value: public, max-age=0, must-revalidate
+#        dest: /index.html
    
       # Ajusta estas rutas a todas las rutas de tu SPA que necesiten redireccionarse
