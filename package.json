@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start" : "serve dist -s -n -L -p $PORT" 
+    "start" : "dist -s -n -L -p $PORT" 
   },
   "dependencies": {
     "axios": "^1.5.1",
