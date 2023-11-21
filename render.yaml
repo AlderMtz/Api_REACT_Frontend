@@ -2,16 +2,12 @@ services:
   - name: my-react-app
     type: web
     buildCommand: npm run build
-    startCommand: serve start # Ajusta esto al comando que inicia tu servidor React
-    env:
-      # Ajusta la ruta a tu archivo de inicio (index.js, server.js, etc.)
-      RENDER_ENTRYPOINT: /src/main.jsx
+    startCommand: npm run serve start # Ajusta esto al comando que inicia tu servidor React
     routes:
-      - src: /
-        dest: /index.html
-      - src: /tasks
-        dest: /index.html
-      - src: /tasks-create
+      - src: /.*
+        headers:
+          - key: Cache-Control
+            value: public, max-age=0, must-revalidate
         dest: /index.html
    
       # Ajusta estas rutas a todas las rutas de tu SPA que necesiten redireccionarse
