@@ -2,7 +2,7 @@ services:
   - name: my-react-app
     type: web
     buildCommand: npm run build
-    startCommand: npm run serve -s build -l $PORT # Ajusta esto al comando que inicia tu servidor React
+    startCommand: npm serve dist -s -n -L -p $PORT # Ajusta esto al comando que inicia tu servidor React
     routes:
       - src: /.*
         headers:
