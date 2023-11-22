@@ -13,6 +13,7 @@ function App() {
 
         <Routes>       {/* actua como una unorder list */}
           <Route path="/" element={<Navigate to={"/tasks"} />} ></Route> {/* Navigate nos sirve para redireccionar a una pagina */}
+          <Route path="/recharge" element={<Navigate to={"/tasks-create"}/>}></Route> {/* hacksito */}
           <Route path="/tasks" element={<TasksPage />} />  {/* y route actua como item en donde colocamos la direccion */}
           <Route path="/tasks-create" element={<TaskFormPage />}></Route> {/* y route actua como item en donde colocamos la direccion */}
           <Route path="/tasks/:id" element={<TaskFormPage />}></Route> {/* reutilizaremos a "TaskFormPage" para crear la opcion de "EDITAR" */}
